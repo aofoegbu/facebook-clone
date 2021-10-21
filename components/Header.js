@@ -48,7 +48,8 @@ function Header() {
             <div className="flex items-center sm:space-x-2 justify-end">
                 {/* Profile Pic */}
                 <Image
-                src={session.user.image} alt="Facebok Logo"
+                src={session.user.image}
+                alt="Facebok Logo"
                 onClick={signOut}
                 className='rounded-full cursor-pointer'
                 width={40}
@@ -56,7 +57,9 @@ function Header() {
                 layout="fixed"
                 />
 
-                <p className="whitespace-no-wrap font-semibold pr-3">{session.user.name}</p>
+                <p className="hidden lg:inline-flex text-sm whitespace-no-wrap font-semibold pr-3">   
+                    {session.user.name}
+                </p>
                 <ViewGridIcon className='icon' />
                 <ChatIcon className='icon' />
                 <BellIcon className='icon' />
@@ -66,4 +69,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;

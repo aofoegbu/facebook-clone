@@ -15,11 +15,11 @@ export default function Home({ session }) {
       </Head> 
 
       <Header />
-     <div className='flex'>
+     <main className='flex'>
       <Sidebar />
       <Feed />
       {/* Widget */}
-     </div>
+     </main>
     </div>
   )
 }
