@@ -1,19 +1,24 @@
 import Image from "next/image";
-import { sigIn } from "next-auth/client";
+import { signIn } from "next-auth/client";
 
 function Login() {
     return (
-        <div>
+        <div className='grid place-items-center'>
             <Image
-            src="https://links.papareact.com/t41"
+            // src='/public/facebook_logo.png'
+            src='https://links.papareact.com/t4i'
             width={400}
             height={400}
             objectFit="contain"
             alt=""
             />
-            <h1 className='p-5 bg-blue-500 rounded-full text-white text-center cursor-pointer'>
+            <h1
+            onClick={signIn}
+            className='p-5 bg-blue-500 rounded-full text-white text-center cursor-pointer'
+            >
                 Login with Facebook
             </h1>
+            
         </div>
     )
 }
