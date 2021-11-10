@@ -2,7 +2,7 @@ import { useSession } from "next-auth/client";
 import {
     ChevronDownIcon,
     ShoppingBagIcon,
-    UsergroupIcon,
+    UserGroupIcon,
 } from "@heroicons/react/outline";
 import {
     CalendarIcon,
@@ -17,7 +17,7 @@ function Sidebar() {
 
     return (
         <div className='p-2 mt-5 max-w-[600px] xl:min-w-[300px]'>
-            <SidebarRow src={session.iser.image} title={session.user.name} />
+            <SidebarRow src={session.user.image} title={session.user.name} />
             <SidebarRow Icon={UsersIcon} title="Friends" />
             <SidebarRow Icon={UserGroupIcon} title="Groups" />
             <SidebarRow Icon={ShoppingBagIcon} title="Marketplace" />
